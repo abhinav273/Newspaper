@@ -52,37 +52,37 @@ if __name__ == '__main__':
             file.write(f"{dt.datetime.now()}: Mix News\n\n")
             news = requests.get(url_mix).text
             print("Mix news begins\n")
-            speak("Mix news begins",7)
+            speak("Mix news begins",0)
         elif inp2 == 2:
             file.write(f"{dt.datetime.now()}: Business News\n")
             news = requests.get(url_bus).text
             print("Business related news begins\n")
-            speak("Business related news begins",7)
+            speak("Business related news begins",0)
         elif inp2 == 3:
             file.write(f"{dt.datetime.now()}: Entertainment News\n")
             news = requests.get(url_ent).text
             print("Entertainment related news begins\n")
-            speak("Entertainment related news begins",7)
+            speak("Entertainment related news begins",0)
         elif inp2 == 4:
             file.write(f"{dt.datetime.now()}: Health News\n")
             news = requests.get(url_health).text
             print("Health related news begins\n")
-            speak("Health related news begins",7)
+            speak("Health related news begins",0)
         elif inp2 == 5:
             file.write(f"{dt.datetime.now()}: Science News\n")
             news = requests.get(url_sci).text
             print("Science related news begins\n")
-            speak("Science related news begins",7)
+            speak("Science related news begins",0)
         elif inp2 == 6:
             file.write(f"{dt.datetime.now()}: Sports News\n")
             news = requests.get(url_sports).text
             print("Sports related news begins\n")
-            speak("Sports related news begins",7)
+            speak("Sports related news begins",0)
         elif inp2 == 7:
             file.write(f"{dt.datetime.now()}: Technology News\n")
             news = requests.get(url_tech).text
             print("Technology related news begins\n")
-            speak("Technology related news begins",7)
+            speak("Technology related news begins",0)
         elif inp2 == 0:
             print("Thank you!\n")
             speak("Thank you!",0)
@@ -97,17 +97,17 @@ if __name__ == '__main__':
             count += 1
             file.write(f"{count}. {article['title']}:    {article['description']}\n\n")
             print(article["title"])
-            speak(article["title"],7)
+            speak(article["title"],0)
             print("\nIf you want to hear complete news\nEnter 'yes'\nEnter anything to go to next news\n")
             speak("If you want to hear complete news. Enter 'yes'. Enter anything to go to next news.",0)
             inp1 = input()
             if inp1 == 'yes':
                 if article["description"] != None:
                     print(article["description"])
-                    speak(article["description"],7)
+                    speak(article["description"],0)
                 else:
                     print("Not Available")
-                    speak("Not Available",7)
+                    speak("Not Available",0)
             if count == n:
                 print("Thank you!\n")
                 speak("Thank you!",0)
